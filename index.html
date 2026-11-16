@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rocky Singh – Computer Science Student</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF0F7; --surface:#FFFFFF; --ink:#16213E; --muted:#56607A; --line:#CBD2E3; --accent:#2D47F0; --accent-ink:#FFFFFF;
+  --head:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0F1426;--surface:#171E37;--ink:#E8ECFA;--muted:#9AA5C4;--line:#2A3357;--accent:#7C90FF;--accent-ink:#0F1426;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0F1426;--surface:#171E37;--ink:#E8ECFA;--muted:#9AA5C4;--line:#2A3357;--accent:#7C90FF;--accent-ink:#0F1426;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;font-weight:500}
+nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:4rem 0 5rem}
+h1{font:800 clamp(3rem,12vw,7.5rem)/.95 var(--head);letter-spacing:-.04em;margin:0 0 1.5rem}
+.hero p{max-width:34rem;font-size:1.25rem;color:var(--muted);margin:0 0 2rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:999px;font-weight:500;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+section{padding:3.5rem 0;border-top:2px solid var(--ink)}
+.grid{display:grid;grid-template-columns:12rem 1fr;gap:2rem}
+h2{font:800 1.75rem/1.1 var(--head);letter-spacing:-.02em;margin:0}
+.proj{display:block;text-decoration:none;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.proj:first-child{padding-top:0}
+.proj h3{font:500 1.5rem/1.2 var(--head);margin:0 0 .4rem}
+.proj p{margin:0 0 .6rem;color:var(--muted);max-width:38rem}
+.proj .stack{font-size:.95rem;color:var(--accent);font-weight:500}
+.proj:hover h3{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:5px;text-decoration-color:var(--accent)}
+dl{margin:0}
+dt{font-weight:500;margin-top:1rem}
+dt:first-child{margin-top:0}
+dd{margin:.15rem 0 0;color:var(--muted)}
+.row{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.row strong{font-weight:500}
+.row span{color:var(--muted)}
+.big{font:800 clamp(1.4rem,5vw,2.5rem)/1.1 var(--head);letter-spacing:-.03em;word-break:break-word}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem}
+@media (max-width:42rem){.grid{grid-template-columns:1fr;gap:1.25rem}.hero{padding:2.5rem 0 3.5rem}nav ul{gap:1rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <strong>Rocky Singh</strong>
+    <ul>
+      <li><a href="#work">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>Rocky Singh</h1>
+    <p>Computer science student who builds software, studies how systems work, and ships projects end to end.</p>
+    <div class="btns">
+      <a class="btn primary" href="#work">See my projects</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="grid">
+      <h2>Projects</h2>
+      <div>
+        <a class="proj" href="#">
+          <h3>Project one: your best work</h3>
+          <p>Describe what it does, who it is for, and the result. Example: a web app that helps students track deadlines, used by 200 classmates.</p>
+          <span class="stack">React, Node.js, PostgreSQL</span>
+        </a>
+        <a class="proj" href="#">
+          <h3>Project two: a systems or algorithms project</h3>
+          <p>Explain the problem you solved and one decision you made. Example: a memory allocator in C that cut allocation time by 30%.</p>
+          <span class="stack">C, Linux, Valgrind</span>
+        </a>
+        <a class="proj" href="#">
+          <h3>Project three: data or machine learning</h3>
+          <p>Say what data you used and what you found. Example: a classifier that predicts course difficulty from past grade data.</p>
+          <span class="stack">Python, pandas, scikit-learn</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="grid">
+      <h2>Skills</h2>
+      <dl>
+        <dt>Languages</dt><dd>Python, Java, C, JavaScript, SQL</dd>
+        <dt>Web and tools</dt><dd>HTML, CSS, React, Node.js, Git, Linux</dd>
+        <dt>Computer science</dt><dd>Data structures and algorithms, operating systems, databases, computer networks</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="grid">
+      <h2>Education</h2>
+      <div>
+        <div class="row"><strong>B.Tech / B.Sc, Computer Science</strong><span>Your university, 20XX to 20XX</span></div>
+        <div class="row"><strong>Relevant coursework</strong><span>Algorithms, OS, DBMS, Networks</span></div>
+        <div class="row"><strong>Achievements</strong><span>Add hackathons, certificates, or awards</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="grid">
+      <h2>Contact</h2>
+      <div>
+        <p style="margin-top:0;color:var(--muted)">Open to internships, collaborations, and interesting projects.</p>
+        <a class="big" href="mailto:beingahaan07@gmail.com">beingahaan07@gmail.com</a>
+        <p style="margin:1rem 0 0"><a href="tel:+918081583501">+91 80815 83501</a></p>
+        <p><a href="https://github.com/ahaancodes" target="_blank" rel="noopener">GitHub</a> &nbsp;&nbsp; <a href="https://www.linkedin.com/in/rockysingh-2a3579372" target="_blank" rel="noopener">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Rocky Singh</footer>
+</div>
+</body>
+</html>
